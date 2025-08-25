@@ -1,21 +1,7 @@
 
 
-pyinstaller --onefile --windowed --icon=resources/favicon.ico crawling.py
-pyinstaller --onefile --windowed --icon=resources/favicon.ico crawling.py
-pyinstaller --onefile --windowed --icon=resources/favicon.ico naver\*search*rank.py
-pyinstaller --onefile --windowed --icon=resources/favicon.ico N사_스마트블록_순위체크v0.0.7.py
-pyinstaller --onefile --windowed --icon=resources/favicon.ico nutriciastore.py
-pyinstaller --onefile --windowed --icon=resources/favicon.ico N사_바이럴_수집v0.0.3.py
-pyinstaller --onefile --windowed --icon=resources/favicon.ico dashboard.py
-pyinstaller --onefile --windowed --icon=resources/favicon.ico dashboard.py
-profit_calculator.py
-pyinstaller --onefile --icon=favicon.ico nutriciastore.py
+pyinstaller --onefile --windowed "스마트_셀러_AI_매칭_프로그램.py"
 
-
-pyinstaller --onefile --windowed dashboard.py
-pyinstaller --onefile --windowed dashboard.py
-pyinstaller --onefile --windowed dashboard.py
-pyinstaller --onefile --windowed dashboard.py
 
 
 
