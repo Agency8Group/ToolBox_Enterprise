@@ -168,6 +168,24 @@
                 }
             }
 
+            /* 아이프레임 임베드 시 스크롤 감춤 및 깔끔한 표시 */
+            html,
+            body {
+                height: 100%;
+            }
+            :root.embedded,
+            :root.embedded body {
+                overflow: hidden !important;
+                -ms-overflow-style: none; /* IE/Edge */
+                scrollbar-width: none; /* Firefox */
+            }
+            :root.embedded body::-webkit-scrollbar {
+                display: none; /* Chrome/Safari */
+            }
+            :root.embedded {
+                background: transparent;
+            }
+
             /* 다운로드 모달 스타일 */
             .download-step {
                 display: flex;
@@ -206,6 +224,19 @@
                 border: 1px solid rgba(255, 255, 255, 0.1);
             }
         </style>
+        <script>
+            (function () {
+                try {
+                    if (window.self !== window.top) {
+                        document.documentElement.classList.add("embedded");
+                        document.body.style.margin = "0";
+                    }
+                } catch (e) {
+                    document.documentElement.classList.add("embedded");
+                    document.body.style.margin = "0";
+                }
+            })();
+        </script>
     </head>
     <body class="bg-black text-white overflow-x-hidden">
         <!-- Hero Section -->
@@ -593,7 +624,7 @@
         <footer class="bg-black py-12">
             <div class="container mx-auto px-6 text-center">
                 <p class="text-gray-400">
-                    © 2024 툴박스 엔터프라이즈. yoonwhan 모든 권리 보유.
+                    Everything arrives in its perfect moment.
                 </p>
             </div>
         </footer>
